@@ -1,0 +1,9 @@
+#!/bin/bash -e
+
+cd $(dirname $0)/..
+
+docker run --rm \
+  --workdir "/terraform" \
+  --volume "${PWD}/terraform:/terraform" \
+  hashicorp/terraform:light \
+  ${@}

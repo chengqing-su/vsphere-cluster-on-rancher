@@ -1,0 +1,6 @@
+*.auto.tfvars
+.terraform
+*.lock.info
+*.backup
+*.tfstate
+terraform.tfvars
