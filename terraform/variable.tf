@@ -113,3 +113,15 @@ variable "worker_count" {
   description = "The number of worker node"
   default = 3
 }
+
+variable "docker_registry_mirror" {
+  type = list
+  description = "The docker registry mirror"
+  default = []
+}
+
+variable "boot2docker_url" {
+  type = string
+  description = "The RancherOS image URL"
+  default = "https://releases.rancher.com/os/latest/rancheros-vmware.iso"
+}

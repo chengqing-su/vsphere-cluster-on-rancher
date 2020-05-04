@@ -18,7 +18,9 @@ resource "rancher2_cloud_credential" "vsphere" {
 resource "rancher2_node_template" "vsphere_k8s_master" {
     name = "vsphere_k8s_master"
     cloud_credential_id = rancher2_cloud_credential.vsphere.id
+    engine_registry_mirror = var.docker_registry_mirror
     vsphere_config{
+        boot2docker_url = var.boot2docker_url
         cpu_count = var.master_cpu
         memory_size = var.master_memory
         disk_size = var.master_disk
@@ -33,7 +35,9 @@ resource "rancher2_node_template" "vsphere_k8s_master" {
 resource "rancher2_node_template" "vsphere_k8s_node" {
     name = "vsphere_k8s_node"
     cloud_credential_id = rancher2_cloud_credential.vsphere.id
+    engine_registry_mirror = var.docker_registry_mirror
     vsphere_config{
+        boot2docker_url = var.boot2docker_url
         cpu_count = var.worker_cpu
         memory_size = var.worker_memory
         disk_size = var.worker_disk
