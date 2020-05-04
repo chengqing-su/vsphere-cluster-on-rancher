@@ -23,6 +23,10 @@ vcenter_datacenter = "<YOUR-VCENTER-DATACENTER>" #absolute path, like /datacente
 vcenter_datastore = "<YOUR-VCENTER-DATASTORE>" #absolute path, like /<your-datacenter-name>/datastore/<your-datastore-name>"
 vcenter_folder = "<YOUR-VCENTER-VM-FOLDER>" #absolute path, like /<your-datacenter-name>/vm/<your-vm-folder>"
 vcenter_resourcepool = "<YOUR-VCENTER-RESOURCE-POOL>" # absolute path, like /<your-datacenter-name>/host/<your-cluster-name>/Resources/<your-resource-pool>
+
+# If your are in China, the below configuration will help you pull docker images and setup node faster than before.
+docker_registry_mirror = ["xxx..mirror.aliyuncs.com"]
+boot2docker_url = "YOUR-OS-URL"
 ```
 
 2. Run command `auto/init` to init terraform.
